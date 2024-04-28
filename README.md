@@ -28,19 +28,47 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+/* 1.Initialize the shift register to a known state (e.g., all zeros).
+
+2.Input a bit serially into the shift register.
+
+3.Shift the contents of the register one position to the right (or left).
+
+4.Output the shifted bit from the last stage of the register.
+
+5.Repeat steps 2-4 for each bit you want to input and shift. */
 
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:LAVANYA S RegisterNumber:212223230112
 */
+```
+module exp11(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(!rstn)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 
 **RTL LOGIC UP COUNTER**
+![image](https://github.com/lavanya-0709/SYNCHRONOUS-UP-COUNTER/assets/152274078/29cb5fa2-b66c-4845-bd21-235c7b3a20cd)
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+![image](https://github.com/lavanya-0709/SYNCHRONOUS-UP-COUNTER/assets/152274078/f672ce8f-eaed-40ca-a3a0-27d2a7d6535d)
+
 
 **TRUTH TABLE**
+![image](https://github.com/lavanya-0709/SYNCHRONOUS-UP-COUNTER/assets/152274078/e0173e15-1c9c-426b-9b52-4fd7a679c826)
+
 
 **RESULTS**
+Thus the program executed successfully.
